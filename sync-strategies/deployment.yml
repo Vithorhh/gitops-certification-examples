@@ -1,5 +1,5 @@
 ---
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: simple-deployment
@@ -14,7 +14,7 @@ spec:
         app: trivial-go-web-app
     spec:
       containers:
-      - name: webserver-simple
-        image: docker.io/kostiscodefresh/gitops-simple-app:v1.0
+      - name: sync-strategies
+        image: docker.io/kostiscodefresh/gitops-simple-app:v2
         ports:
         - containerPort: 8080
